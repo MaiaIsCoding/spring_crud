@@ -18,10 +18,7 @@ public class Vendedor {
 	
 	@Column(name="nome")
 	private String nome;
-	
-	@Column(name="total_vendas")
-	private int totalVendas;
-	
+
 	public Vendedor() {
 		
 	}
@@ -42,17 +39,8 @@ public class Vendedor {
 		this.nome = nome;
 	}
 
-	public int getTotalVendas() {
-		return totalVendas;
-	}
-
-	public void setTotalVendas(int totalVendas) {
-		this.totalVendas = totalVendas;
-	}
-
 	@Override
 	public String toString() {
-		return "Vendedor [id=" + id + ", nome=" + nome + ", totalVendas=" + totalVendas + "]";
+		return "Vendedor [id=" + id + ", nome=" + nome + "]";
 	}
-	
 }

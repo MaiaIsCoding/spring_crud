@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h2>Lista de vendedores</h2>
+<h2>Lista de vendedores por data</h2>
 
 <!-- Exibir dados dos vendedores -->
 <table>
@@ -17,13 +17,12 @@
 		<th>ID</th>
 		<th>Nome</th>
 	</tr>
-	
+			
 	<c:forEach var="tempVendedor" items="${vendedor}">
 		<tr>
 			<td>${tempVendedor.id}</td>
 			<td>${tempVendedor.nome}</td>
 		</tr>
-			
 	</c:forEach>
 </table>
 
@@ -47,8 +46,9 @@
 
 </form>
 
-<!-- Link para a tabela de vendas -->
-<a href="${pageContext.request.contextPath}/vendas/list">Vendas</a>
+<!-- Link para retornar para a tabela inicial -->
+<c:url var="returnLink" value="list"/>
+<a href="${returnLink}">Retornar</a>
 
 </body>
 
