@@ -42,5 +42,19 @@ group by vendedor.id, vendedor.nome;**
 
 Também é possível visualizar a tabela de vendas, seus resultados e adicionar novas vendas que afetam a contagem de vendas totais dos vendedores
 
+### REST 
+
+Foi criado um novo projeto Spring Boot e adicionado as dependencias:
+
+- spring-webmvc (5.0.6)
+- spring-tx (5.0.6)
+- spring-orm (5.0.6)
+- jackson.core (2.9.5)
+- hibernate-core (5.1.0)
+- mysql-connector-java (5.1.45)
+- c3p0 (0.9.5.2)
+- javax.servlet-api (3.1.0)
+- javax.servlet-jsp-api (2.3.1)
+
 Devido as limitações de tempo a REST API não pode ser finalizada de acordo com os parametros
-estipulados por errros de comunicação com a `SessionFactory`
+estipulados por erros de comunicação com a `SessionFactory` que dificultarão e prolongarão o desenvolvimento do projeto
