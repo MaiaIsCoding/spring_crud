@@ -29,17 +29,27 @@ ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=latin1;
 Para mostrar a funcionalidade de receber um parametro da view e gerar uma query especifica, foi criada a funcionalidade de fazer uma query
 sobre um vendedor especifico utilizando o campo `Data Inicial`. As queries que não foram implementadas seriam as seguintes com suas respectivas funcionalidades
 
-- Mostrar o nome do vendedor. Tabela (vendas) 
-**select vendas.*, vendedor.nome from vendas left join vendedor on vendas.vendedor_id = vendedor.id;**
+- Mostrar o nome do vendedor. Tabela (vendas)
 
-- Total de vendas do vendedor. Tabela (vendedor) 
-**select vendedor.*, count(vendas.vendedor_id) as total_vendas from vendedor left join vendas on vendas.vendedor_id = vendedor.id 
-group by vendedor.id, vendedor.nome;**
+```
+select vendas.*, vendedor.nome from vendas left join vendedor on vendas.vendedor_id = vendedor.id;
+```
+
+- Total de vendas do vendedor. Tabela (vendedor)
+
+```
+select vendedor.*, count(vendas.vendedor_id) as total_vendas from vendedor   
+left join vendas on vendas.vendedor_id = vendedor.id 
+group by vendedor.id, vendedor.nome;
+```
 
 - Total de vendas do vendedor dentro de um periodo. Tabela (vendedor)
-** select vendedor.*, count(vendas.vendedor_id) as total_vendas from vendedor
+
+```
+select vendedor.*, count(vendas.vendedor_id) as total_vendas from vendedor   
 left join vendas on vendas.vendedor_id = vendedor.id and vendas.data_venda between '05-04-2015' and '05-07-2021'
-group by vendedor.id, vendedor.nome;**
+group by vendedor.id, vendedor.nome;
+```
 
 Também é possível visualizar a tabela de vendas, seus resultados e adicionar novas vendas que afetam a contagem de vendas totais dos vendedores
 
