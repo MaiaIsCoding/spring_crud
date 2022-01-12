@@ -57,5 +57,5 @@ Foi criado um novo projeto Spring Boot e adicionado as dependencias:
 - javax.servlet-api (3.1.0)
 - javax.servlet-jsp-api (2.3.1)
 
-Devido as limitações de tempo a REST API não pode ser finalizada de acordo com os parametros
-estipulados por erros de comunicação com a `SessionFactory` que dificultarão e prolongarão o desenvolvimento do projeto
+Devido as restrições de tempo a REST API não pode ser finalizada de acordo com os parametros
+estipulados por erros de comunicação com a `SessionFactory` que dificultaram o desenvolvimento do projeto
