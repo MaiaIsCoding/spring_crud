@@ -3,6 +3,7 @@
 ### Hibernate
 
 Foi criado um projeto Hibernate (spring_vendas) e um projeto REST (rest_api)
+todos os JARs necessários para executar o programa se encontram `/spring_vendas/WebContent/WEB-INF/lib`
 E um banco de dados MySQL em comum utilizado pelos dois com duas tabelas: Vendedor e Vendas
 
 ```
